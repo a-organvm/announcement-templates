@@ -82,9 +82,14 @@ def test_template_renders_all_channels(template_file: Path):
         )
 
 
-def test_all_17_templates_discovered():
-    """Verify we have exactly 17 template files."""
-    assert len(TEMPLATE_FILES) == 17, (
-        f"Expected 17 templates, found {len(TEMPLATE_FILES)}: "
+def test_all_templates_discovered():
+    """Verify the expected number of template files are present.
+
+    Bump EXPECTED_TEMPLATE_COUNT whenever a template is added or removed so a
+    missing/dropped file is caught instead of silently changing the inventory.
+    """
+    EXPECTED_TEMPLATE_COUNT = 18
+    assert len(TEMPLATE_FILES) == EXPECTED_TEMPLATE_COUNT, (
+        f"Expected {EXPECTED_TEMPLATE_COUNT} templates, found {len(TEMPLATE_FILES)}: "
         f"{[f.stem for f in TEMPLATE_FILES]}"
     )
