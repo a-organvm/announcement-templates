@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "description": "Repositories discovered to hold latent value and promoted into the ranked build-out tier.",
+  "repos": [
+    {
+      "repo": "organvm/announcement-templates",
+      "organ": "VII",
+      "tier": "ranked",
+      "discovered": "2026-06-22",
+      "value_class": "reusable-asset",
+      "value_thesis": "Zero-dependency cross-channel content-rendering engine + platform quality gate (char limits, hashtag caps, unresolved-var/link checks) + registry loader. Already live with a CLI, 18 templates, 101 passing tests, and a downstream consumer (ORGAN-IV). Highest leverage as an importable publishing library for every social-posting repo in the estate, not a single-consumer JSON producer.",
+      "first_task": "Expose kerygma_templates.render_and_check(event, channel) in __init__.py (wrapping TemplateEngine.render + QualityChecker.check over the bundled templates dir) and consume it from social-automation instead of the static template-registry.json export.",
+      "thesis_doc": "DISCOVERY.md"
+    }
+  ]
+}
